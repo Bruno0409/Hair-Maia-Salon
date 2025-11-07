@@ -625,7 +625,7 @@ body {
  *****************************************************/
 /* Estilo geral do Footer */
 .footer {
-    background-color:  var(--color-primary);
+    background-color: var(--color-primary);
     color: #fff; /* Texto branco */
     padding: 40px 0;
 }
@@ -640,6 +640,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Links */
 .footer .footer-link {
     display: block;
     color: #fff; /* Todos os links em branco */
@@ -652,8 +653,16 @@ body {
     color: #fff; /* Sem alteração de cor ao passar o mouse */
 }
 
+/* Alinhamento de texto à esquerda */
+.footer .footer-link,
+.footer .footer-title {
+    text-align: left; /* Garante que o texto vai para a esquerda */
+}
+
+/* Redes sociais */
 .footer .social-icons {
     margin-top: 15px;
+    text-align: left; /* Alinha os ícones sociais à esquerda */
 }
 
 .footer .social-btn {
@@ -666,26 +675,32 @@ body {
     border-radius: 50%;
 }
 
-/* Alinhamento dos links */
-.footer .footer-link {
-    padding-left: 0;
-    text-align: left;
-}
-
-/* Adaptação para diferentes tamanhos de tela */
+/* Configurações para mobile (até 768px) */
 @media (max-width: 768px) {
     .footer .footer-col {
-        text-align: center;
+        text-align: left; /* Alinha o conteúdo das colunas à esquerda */
+        margin-bottom: 20px; /* Ajuste o espaçamento entre as colunas */
     }
 
     .footer .footer-title {
         margin-bottom: 10px;
     }
 
+    /* Redes sociais continuam alinhadas à esquerda */
+    .footer .social-icons {
+        text-align: left;
+    }
+
     .footer .social-btn {
         margin-bottom: 10px;
     }
+
+    /* Manter o tamanho das colunas no mobile */
+    .footer .col-lg-4, .footer .col-md-6 {
+        width: 100%; /* Cada coluna ocupa 100% da largura disponível */
+    }
 }
+
 
 
 
