@@ -368,6 +368,13 @@ h1, h5 {
 }
 
 /*****************************************************
+ * PARCERIAS
+ *****************************************************/
+
+
+
+
+/*****************************************************
  * FAQ E MAPA
  *****************************************************/
 
@@ -673,6 +680,11 @@ body {
  * FOOTER
  *****************************************************/
 /* Estilo geral do Footer */
+
+p {
+  margin-bottom: 0;
+}
+
 .footer {
     background-color: var(--color-primary);
     color: #fff; /* Texto branco */
@@ -732,7 +744,7 @@ body {
     }
 
     .footer .footer-title {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     /* Redes sociais continuam alinhadas à esquerda */

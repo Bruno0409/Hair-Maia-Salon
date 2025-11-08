@@ -82,3 +82,11 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     }
   });
 });
+
+// Obtém o ano atual
+var currentYear = new Date().getFullYear();
+
+// Se o ano atual for maior ou igual a 2025, atualiza o ano exibido
+if (currentYear >= 2025) {
+  document.getElementById("current-year").textContent = currentYear;
+}
