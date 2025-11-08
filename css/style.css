@@ -311,15 +311,48 @@ h1, h5 {
   border-radius: 10px; /* Bordas arredondadas */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
   overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas do iframe */
-  height: 490px; /* Definir altura maior */
+  width: 100%; /* O iframe vai ocupar 100% da largura da coluna */
+  height: 300px; /* Definindo uma altura base para o iframe */
 }
 
-/* Em dispositivos móveis, podemos ajustar a altura para algo menor */
+/* Ajuste para dispositivos móveis */
 @media (max-width: 768px) {
   .insta-video iframe {
-    height: 590px; /* Altura um pouco menor em dispositivos móveis */
+    height: 450px; /* Menor altura para dispositivos móveis */
+  }
+
+  /* Mudança no layout para dispositivos móveis */
+  .col-12 {
+    width: 100%; /* Cada iframe ocupa toda a largura em dispositivos móveis */
+    margin-bottom: 20px; /* Espaço entre os vídeos */
   }
 }
+
+/* Ajustes para Tablets (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .insta-video iframe {
+    height: 450px; /* Altura do iframe ajustada para tablets */
+  }
+
+  /* Layout de 2 colunas em tablets */
+  .col-md-6 {
+    width: 50%; /* As colunas ocupam 50% da largura (2 cards por linha) */
+  }
+}
+
+/* Ajustes para Desktop */
+@media (min-width: 1025px) {
+  .insta-video iframe {
+    height: 370px; /* Altura ajustada para desktops */
+  }
+
+  /* Layout de 4 colunas em desktops */
+  .col-lg-3 {
+    width: 25%; /* As colunas ocupam 25% da largura (4 cards por linha) */
+  }
+}
+
+
 
 /*****************************************************
  * CURSOS
@@ -366,12 +399,6 @@ h1, h5 {
 .curso-card a.btn:hover {
   background-color: #6b7b68;
 }
-
-/*****************************************************
- * PARCERIAS
- *****************************************************/
-
-
 
 
 /*****************************************************
