@@ -121,7 +121,7 @@ section {
 .image-carousel img {
   flex: 0 0 auto;
   width: 80%;
-  height: 520px;
+  height: 400px;
   object-fit: cover;
   scroll-snap-align: center;
   border-radius: 10px;
@@ -134,6 +134,10 @@ h1, h5 {
 .texto-branco {
   color:  #FFFFFF;
 }
+
+/*****************************************************
+ * EQUIPE
+ *****************************************************/
 
 .team-member {
   background-color: #fff; /* Garantir que o fundo seja branco */
@@ -148,7 +152,7 @@ h1, h5 {
 
 .team-member img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px 10px 0 0; /* Apenas arredonda as bordas superiores */
 }
@@ -171,7 +175,9 @@ h1, h5 {
   /* Removido o box-shadow aqui */
 }
 
-
+/*****************************************************
+ * SERVIÇOS
+ *****************************************************/
 
 .service-banner {
   position: relative;
@@ -227,6 +233,9 @@ h1, h5 {
   color: #7C8C78;
 }
 
+/*****************************************************
+ * PORTFÓLIO
+ *****************************************************/
 
 .portfolio-card {
   position: relative;
@@ -275,6 +284,10 @@ h1, h5 {
   color: #FFFFFF;
 }
 
+/*****************************************************
+ * ME CONHEÇA
+ *****************************************************/
+
 .me-conheca-section h1 {
   color: #333;
 }
@@ -289,6 +302,29 @@ h1, h5 {
   height: auto;
   object-fit: cover;
 }
+
+/*****************************************************
+ * INSTAGRAM
+ *****************************************************/
+/* Estilo para o iframe do Instagram */
+.insta-video iframe {
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas do iframe */
+  height: 490px; /* Definir altura maior */
+}
+
+/* Em dispositivos móveis, podemos ajustar a altura para algo menor */
+@media (max-width: 768px) {
+  .insta-video iframe {
+    height: 590px; /* Altura um pouco menor em dispositivos móveis */
+  }
+}
+
+/*****************************************************
+ * CURSOS
+ *****************************************************/
+
 
 .curso-card {
   background: #fff;
@@ -330,6 +366,10 @@ h1, h5 {
 .curso-card a.btn:hover {
   background-color: #6b7b68;
 }
+
+/*****************************************************
+ * FAQ E MAPA
+ *****************************************************/
 
 .faq-map-section {
   position: relative;
@@ -397,6 +437,9 @@ h1, h5 {
   border-radius: 20px;
 }
 
+/*****************************************************
+ * BOTÃO WHATSAPP
+ *****************************************************/
 
 /* Estilo para o botão flutuante */
 .whatsapp-float-btn {
@@ -447,8 +490,6 @@ h1, h5 {
 .whatsapp-float-btn:active i {
     color: white; /* Garante que o ícone não mude de cor ao passar o mouse */
 }
-
-
 
 
 /*****************************************************
