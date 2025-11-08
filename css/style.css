@@ -318,7 +318,7 @@ h1, h5 {
 /* Ajuste para dispositivos móveis */
 @media (max-width: 768px) {
   .insta-video iframe {
-    height: 450px; /* Menor altura para dispositivos móveis */
+    height: 480px; /* Menor altura para dispositivos móveis */
   }
 
   /* Mudança no layout para dispositivos móveis */
