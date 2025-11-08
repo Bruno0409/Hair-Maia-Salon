@@ -448,8 +448,9 @@ h1, h5 {
     right: 20px;  /* Distância da lateral direita */
     background-color: #25D366; /* Cor do WhatsApp */
     color: white;
-    padding: 15px;  /* Espaço para o ícone */
-    border-radius: 50%;  /* Botão arredondado */
+    width: 60px; /* Tamanho fixo do botão */
+    height: 60px; /* Tamanho fixo do botão */
+    border-radius: 50%;  /* Garantir o formato redondo */
     font-size: 30px;  /* Tamanho do ícone */
     display: flex;
     align-items: center;
