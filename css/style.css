@@ -608,68 +608,64 @@ body {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    align-items: flex-start;  /* Alinha o conteúdo à esquerda */
+    justify-content: center;  /* Alinha o conteúdo ao centro por padrão */
     text-align: left;
-    padding: 3rem 0 3rem 11rem;
+    padding: 2rem 1.5rem;  /* Padding padrão para celulares */
     z-index: 1;
 }
 
-/* .carousel .carousel-indicators [data-bs-target] {
-    width: 70px;
-    height: 70px;
-    text-indent: 0;
-    margin: 5px 0;
-    border: 2px solid var(--color-secondary);
-    overflow: hidden;
-} */
-
-/* .carousel .carousel-indicators [data-bs-target] img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-/* @media (max-width: 992px) {
-    .carousel .carousel-item {
-        position: relative;
-        min-height: 600px;
-    }
-    .carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .carousel .carousel-indicators [data-bs-target] {
-        width: 60px;
-        height: 60px;
-    }
-    .carousel .carousel-caption {
-        padding-left: 10rem;
-    }
+/* Ajuste para o título dentro do carrossel */
+.carousel .carousel-caption h1 {
+    margin: 0;
+    font-size: 2rem; /* Tamanho menor para telas pequenas (celular) */
+    color: var(--color-secondary);
+    font-weight: 400;
 }
 
-@media (max-width: 768px) {
-    .carousel .carousel-item { min-height: 500px; }
-    .carousel .carousel-indicators [data-bs-target] {
-        width: 50px;
-        height: 50px;
-    }
-    .carousel .carousel-caption {
-        padding-left: 9rem;
-    }
+/* Ajustes para telas pequenas (mobile) */
+@media (max-width: 767px) {  /* Para telas pequenas (celular) */
+  .carousel .carousel-caption {
+    padding-top: 7rem;  /* Aumentei o padding-top para descer mais o conteúdo */
+    margin-top: 2rem;  /* Adicionando margem superior para afastar ainda mais */
+  }
+
+  .carousel .carousel-caption h1 {
+    font-size: 2.5rem;  /* Ajuste o tamanho do título se necessário */
+  }
 }
 
-@media (min-width: 1200px) {
-    .carousel .carousel-item .display-1 { font-size: 7rem; }
-} */
+/* Ajustes para tablets (telas médias) */
+@media (min-width: 768px) {
+  .carousel .carousel-caption {
+    padding: 7rem 2rem; /* Mais espaço lateral */
+    margin-top: 20rem;
+  }
+
+  .carousel .carousel-caption h1 {
+    font-size: 3rem; /* Tamanho maior que no celular */
+  }
+}
+
+/* Ajustes para desktops (telas grandes) */
+@media (min-width: 992px) {
+  .carousel .carousel-caption {
+    padding-left: 90px !important;  /* Padding maior à esquerda */
+    padding-right: 3rem; /* Mantém um padding direito decente */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .carousel .carousel-caption h1 {
+    font-size: 4rem;  /* Título bem maior em desktop */
+  }
+}
 
 
-/*****************************************************
- * FOOTER
- *****************************************************/
-/* Estilo geral do Footer */
+
+
+
+
 
 p {
   margin-bottom: 0;
