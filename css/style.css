@@ -808,17 +808,17 @@ p {
 /* Estilos para a faixa */
 .secao-faixa .faixa {
     position: absolute; /* Faixa posicionada absolutamente na tela */
-    width: 200%; /* A largura da faixa deve ser maior que a tela */
+    width: 100%; /* A largura da faixa deve ser maior que a tela */
     height: 70px; /* Altura da faixa */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #7C8C78; /* Cor sólida verde suave */
-    transform: rotate(-3deg); /* Inclina a faixa a 45 graus */
+    transform: rotate(-3deg);
     overflow: hidden; /* Impede que a faixa ultrapasse os limites */
     top: 50%; /* Coloca a faixa no meio da tela */
-    left: -50%; /* Inicia no canto inferior esquerdo */
-    transform-origin: center center; /* Garantir que a faixa se mova da origem central */
+    left: 0; /* Inicia no canto inferior esquerdo */
+    transform-origin: top center; /* Garantir que a faixa se mova da origem central */
 }
 
 .secao-faixa2 {
@@ -833,7 +833,7 @@ p {
 
 .secao-faixa2 .faixa2 {
     position: absolute;
-    width: 200%; /* Largura da faixa */
+    width: 100%; /* Largura da faixa */
     height: 70px; /* Altura da faixa */
     display: flex;
     justify-content: center;
@@ -842,8 +842,8 @@ p {
     transform: rotate(-3deg) translateY(-80%); /* Para desktop */
     overflow: hidden;
     top: 50%; /* Posição base */
-    left: -50%;
-    transform-origin: center center;
+    left: 0;
+    transform-origin: top center;
 }
 
 /* Media Query para dispositivos tablets (largura de até 1024px) */
