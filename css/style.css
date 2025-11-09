@@ -117,7 +117,6 @@ section {
   scroll-snap-type: x proximity; /* mais suave */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  overflow: hidden;
 }
 
 .image-carousel img {
@@ -814,58 +813,12 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #7C8C78; /* Cor sólida verde suave */
-    transform: rotate(-3deg);
     overflow: hidden; /* Impede que a faixa ultrapasse os limites */
-    top: 50%; /* Coloca a faixa no meio da tela */
+    top: 10%; /* Coloca a faixa no meio da tela */
     left: 0; /* Inicia no canto inferior esquerdo */
-    transform-origin: top center; /* Garantir que a faixa se mova da origem central */
+    transform-origin: center center; /* Garantir que a faixa se mova da origem central */
 }
 
-.secao-faixa2 {
-    width: 100%; /* Largura total da tela */
-    position: relative; /* Para garantir o posicionamento da faixa */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Espaço entre as seções */
-    z-index: 1000;
-}
-
-.secao-faixa2 .faixa2 {
-    position: absolute;
-    width: 100%; /* Largura da faixa */
-    height: 70px; /* Altura da faixa */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #7C8C78; /* Cor da faixa */
-    transform: rotate(-3deg) translateY(-80%); /* Para desktop */
-    overflow: hidden;
-    top: 50%; /* Posição base */
-    left: 0;
-    transform-origin: top center;
-}
-
-/* Media Query para dispositivos tablets (largura de até 1024px) */
-@media (max-width: 1024px) {
-    .secao-faixa2 .faixa2 {
-        transform: rotate(-3deg) translateY(-60%); /* Menos deslocamento para tablets */
-    }
-}
-
-/* Media Query para dispositivos móveis (largura de até 768px) */
-@media (max-width: 768px) {
-    .secao-faixa2 .faixa2 {
-        transform: rotate(-3deg) translateY(-100%); /* Menos deslocamento para mobile */
-    }
-}
-
-/* Media Query para telas pequenas (como celulares muito pequenos, até 480px) */
-@media (max-width: 480px) {
-    .secao-faixa2 .faixa2 {
-        transform: rotate(-3deg) translateY(-60%); /* Ajuste para telas muito pequenas */
-    }
-}
 
 /* Estilos para as logos dentro da faixa */
 .logo {
