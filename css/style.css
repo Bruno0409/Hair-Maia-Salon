@@ -4,7 +4,7 @@
 :root {
     /* === Cores === */
     --color-primary: #7C8C78;
-    --color-secondary: #DFCFC1;
+    --color-secondary: #fffef4;
     --color-dark: #212529;
     --color-light: #f8f9fa;
     --color-white: #ffffff;
@@ -14,7 +14,8 @@
     --gradient-dark-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 
     /* === Tipografia === */
-    --font-family-base: "Playfair Display", sans-serif;
+    --font-family-base: "Montserrat", sans-serif;
+    --font-family-destaque: "Playfair Display", sans-serif;
     --font-size-base: 16px;
     --font-weight-normal: 400;
     --font-weight-medium: 600;
@@ -36,8 +37,8 @@ section {
   scroll-margin-top: 70px; /* ajuste conforme a altura do seu header */
 }
 
-.bg-bege {
-    background-color: #fffef7; /* Cor bege */
+.bg-bege, body {
+    background-color:  var(--color-secondary);
 }
 
 
@@ -74,11 +75,11 @@ section {
 #header-carousel,
 #header-carousel .carousel-inner,
 #header-carousel .carousel-item {
-    height: 100vh;         /* Altura total desejada */
+    height: 95vh;         /* Altura total desejada */
 }
 
 #header-carousel .carousel-item img {
-    height: 100vh;         /* Faz a imagem ocupar todo o item */
+    height: 95vh;         /* Faz a imagem ocupar todo o item */
     object-fit: cover;     /* Preenche sem distorcer */
 }
 
@@ -116,12 +117,13 @@ section {
   scroll-snap-type: x proximity; /* mais suave */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 .image-carousel img {
   flex: 0 0 auto;
   width: 80%;
-  height: 400px;
+  height: 600px;
   object-fit: cover;
   scroll-snap-align: center;
   border-radius: 10px;
@@ -129,51 +131,17 @@ section {
 
 h1, h5 {
   font-family: 'Playfair Display', serif;
+  color:  var(--color-secondary);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
 }
 
 .texto-branco {
-  color:  #FFFFFF;
+  color:  var(--color-secondary);
 }
 
-/*****************************************************
- * EQUIPE
- *****************************************************/
-
-.team-member {
-  background-color: #fff; /* Garantir que o fundo seja branco */
-  text-align: center;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra fixa */
-  height: 100%; /* Garante que o item ocupe toda a altura do container */
-  padding-bottom: 20px; /* Espaço abaixo para garantir que o conteúdo não fique muito colado ao fundo */
-  transition: transform 0.3s; /* Animação para o efeito de elevação */
-}
-
-.team-member img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0; /* Apenas arredonda as bordas superiores */
-}
-
-.team-member h5 {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.team-member p {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 15px; /* Espaço entre o texto e a parte inferior do card */
-}
-
-/* Efeito hover removido (não é mais necessário) */
-.team-member:hover {
-  transform: translateY(-5px);
-  /* Removido o box-shadow aqui */
-}
 
 /*****************************************************
  * SERVIÇOS
@@ -223,7 +191,7 @@ h1, h5 {
   display: inline-block;
   padding: 8px 20px;
   background: #D1AE6C;
-  color: #fff;
+  color: var(--color-secondary);
   font-size: 14px;
   text-decoration: none;
 }
@@ -818,4 +786,100 @@ p {
 .copyright a:hover {
     color: var(--color-primary);
     text-decoration: underline;
+}
+
+/*****************************************************
+ * FAIXA
+ *****************************************************/
+
+
+/* Estilos para a faixa entre as seções */
+.secao-faixa {
+    width: 100%; /* Largura total da tela */
+    position: relative; /* Para garantir o posicionamento da faixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Espaço entre as seções */
+    z-index: 1000;
+
+}
+
+/* Estilos para a faixa */
+.secao-faixa .faixa {
+    position: absolute; /* Faixa posicionada absolutamente na tela */
+    width: 200%; /* A largura da faixa deve ser maior que a tela */
+    height: 70px; /* Altura da faixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C8C78; /* Cor sólida verde suave */
+    transform: rotate(-3deg); /* Inclina a faixa a 45 graus */
+    overflow: hidden; /* Impede que a faixa ultrapasse os limites */
+    top: 50%; /* Coloca a faixa no meio da tela */
+    left: -50%; /* Inicia no canto inferior esquerdo */
+    transform-origin: center center; /* Garantir que a faixa se mova da origem central */
+}
+
+.secao-faixa2 {
+    width: 100%; /* Largura total da tela */
+    position: relative; /* Para garantir o posicionamento da faixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Espaço entre as seções */
+    z-index: 1000;
+}
+
+.secao-faixa2 .faixa2 {
+    position: absolute;
+    width: 200%; /* Largura da faixa */
+    height: 70px; /* Altura da faixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C8C78; /* Cor da faixa */
+    transform: rotate(-3deg) translateY(-80%); /* Para desktop */
+    overflow: hidden;
+    top: 50%; /* Posição base */
+    left: -50%;
+    transform-origin: center center;
+}
+
+/* Media Query para dispositivos tablets (largura de até 1024px) */
+@media (max-width: 1024px) {
+    .secao-faixa2 .faixa2 {
+        transform: rotate(-3deg) translateY(-60%); /* Menos deslocamento para tablets */
+    }
+}
+
+/* Media Query para dispositivos móveis (largura de até 768px) */
+@media (max-width: 768px) {
+    .secao-faixa2 .faixa2 {
+        transform: rotate(-3deg) translateY(-100%); /* Menos deslocamento para mobile */
+    }
+}
+
+/* Media Query para telas pequenas (como celulares muito pequenos, até 480px) */
+@media (max-width: 480px) {
+    .secao-faixa2 .faixa2 {
+        transform: rotate(-3deg) translateY(-60%); /* Ajuste para telas muito pequenas */
+    }
+}
+
+/* Estilos para as logos dentro da faixa */
+.logo {
+    height: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 20px; /* Espaço entre as logos */
+    animation: deslizar-diagonal 12s linear infinite; /* Animação horizontal suave */
+}
+
+/* Animação do movimento suave da logo */
+@keyframes deslizar-diagonal {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fora da tela à esquerda */
+    }
 }
