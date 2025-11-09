@@ -5,10 +5,9 @@
     /* === Cores === */
     --color-primary: #7C8C78;
     --color-secondary: #fffef4;
-    --color-dark: #212529;
-    --color-light: #f8f9fa;
-    --color-white: #ffffff;
-    --color-black: #000000;
+    --color-detail:#D1AE6C;
+    --color-gray: #555;
+    --color-black: #3e3e3e;
 
     /* === Gradientes e fundos === */
     --gradient-dark-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -28,9 +27,6 @@
     --space-lg: 2rem;
     --space-xl: 5rem;
 
-    /* === Bordas e efeitos === */
-    --border-radius: 5px;
-    --shadow-light: 0 0 45px rgba(0, 0, 0, 0.05);
 }
 
 section {
@@ -47,20 +43,22 @@ section {
 }
 
 .social-btn {
-    background-color: var(--color-white); /* ou transparente, se quiser */
-    color: var(--color-primary); /* cor dos ícones */
-    border: 1px solid var(--color-primary); /* opcional, para borda */
+    background-color:  var(--color-secondary);
+    border-radius: 8px;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
     transition: all 0.3s;
 }
 
 .social-btn:hover {
     background-color: var(--color-primary); /* fundo verde no hover */
-    color: var(--color-white); /* ícone branco no hover */
+    color: var(--color-secondary); /* ícone branco no hover */
 }
 
 .btn-agendar {
     background-color: var(--color-primary);
-    color: var(--color-white); /* texto branco */
+    border-radius: 8px;
+    color:  var(--color-secondary);/* texto branco */
     border: none; /* opcional, remove a borda padrão do Bootstrap */
     transition: all 0.3s;
     font-size: 18px;
@@ -68,7 +66,7 @@ section {
 
 .btn-agendar:hover {
     background-color: #6b7a68; /* tom mais escuro para hover */
-    color: var(--color-white);
+    color:  var(--color-secondary);
 }
 
 /* Faz o carrossel ocupar toda a altura da tela */
@@ -92,13 +90,13 @@ section {
 
 /* Destaque para a palavra "beleza" */
 .text-highlight {
-  color: #D1AE6C; /* tom rosado suave – elegante */
+  color: var(--color-detail);
 }
 
 /* "Hair Maia Salon" com Montserrat e outra cor */
 .text-brand {
   font-family: 'Montserrat', sans-serif;
-  color: #D1AE6C; /* tom dourado sofisticado */
+  color: var(--color-detail); /* tom dourado sofisticado */
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -169,7 +167,7 @@ h2 {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  color: #fff;
+  color: var(--color-secondary);
   text-align: left;
 }
 
@@ -188,16 +186,17 @@ h2 {
 
 .service-btn {
   display: inline-block;
+  border-radius: 8px;
   padding: 8px 20px;
-  background: #D1AE6C;
+  background:  var(--color-detail);
   color: var(--color-secondary);
   font-size: 14px;
   text-decoration: none;
 }
 
 .service-btn:hover {
-  background: #D1AE6C;
-  color: #7C8C78;
+  background:  var(--color-detail);
+  color:  var(--color-secondary);
 }
 
 /*****************************************************
@@ -233,7 +232,7 @@ h2 {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  color: #fff;
+  color: var(--color-secondary);
 }
 
 .portfolio-info h5 {
@@ -248,7 +247,7 @@ h2 {
 }
 
 .titulo-card {
-  color: #FFFFFF;
+  color: var(--color-secondary);
 }
 
 /*****************************************************
@@ -256,11 +255,11 @@ h2 {
  *****************************************************/
 
 .me-conheca-section h1 {
-  color: #333;
+  color: var(--color-gray);
 }
 
 .me-conheca-section p {
-  color: #555;
+  color: var(--color-gray);
   line-height: 1.7;
 }
 
@@ -327,7 +326,7 @@ h2 {
 
 
 .curso-card {
-  background: #fff;
+  background: var(--color-secondary);
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 10px;
 }
@@ -349,23 +348,20 @@ h2 {
 
 .curso-subtitle {
   font-weight: 600;
-  color: #7C8C78; /* verde do tema */
+  color: var(--color-primary);
 }
 
 .curso-info {
-  color: #555;
+  color: var(--color-gray);
 }
 
 .curso-card a.btn {
-  background-color: #7C8C78;
+  background-color:  var(--color-primary);
   border: none;
-  color: #fff;
+  color: var(--color-secondary);
   transition: background-color 0.3s;
 }
 
-.curso-card a.btn:hover {
-  background-color: #6b7b68;
-}
 
 
 /*****************************************************
@@ -377,7 +373,7 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
+  color: var(--color-secondary);
 }
 
 .faq-map-section .overlay {
@@ -400,8 +396,8 @@ h2 {
 .faq-item {
   margin-bottom: 15px;
   border-radius: 10px;
-  background: #7C8C78; /* cor verde */
-  color: #fff; /* texto branco */
+  background:var(--color-primary);
+  color:var(--color-secondary);
   padding: 20px 25px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   cursor: pointer;
@@ -418,7 +414,7 @@ h2 {
   right: 0;
   font-size: 20px;
   transition: transform 0.3s;
-  color: #fff; /* ícone branco */
+  color: var(--color-secondary);
 }
 
 .faq-item.active .faq-question::after {
@@ -550,7 +546,7 @@ body {
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
-    color: var(--color-dark);
+    color: var(--color-black);
     font-size: 16px;
     text-transform: none;
     font-weight: var(--font-weight-medium);
@@ -579,7 +575,7 @@ body {
 
     .navbar .navbar-nav {
         margin-top: 15px;
-        border-top: 1px solid #EEEEEE;
+        border-top: 1px solid var(--color-secondary);
     }
 }
 
@@ -619,22 +615,22 @@ body {
     z-index: 1;
 }
 
-.carousel .carousel-indicators [data-bs-target] {
+/* .carousel .carousel-indicators [data-bs-target] {
     width: 70px;
     height: 70px;
     text-indent: 0;
     margin: 5px 0;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-secondary);
     overflow: hidden;
-}
+} */
 
-.carousel .carousel-indicators [data-bs-target] img {
+/* .carousel .carousel-indicators [data-bs-target] img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .carousel .carousel-item {
         position: relative;
         min-height: 600px;
@@ -667,7 +663,7 @@ body {
 
 @media (min-width: 1200px) {
     .carousel .carousel-item .display-1 { font-size: 7rem; }
-}
+} */
 
 
 /*****************************************************
@@ -681,7 +677,7 @@ p {
 
 .footer {
     background-color: var(--color-primary);
-    color: #fff; /* Texto branco */
+    color: var(--color-secondary);
     padding: 40px 0;
 }
 
@@ -698,14 +694,14 @@ p {
 /* Links */
 .footer .footer-link {
     display: block;
-    color: #fff; /* Todos os links em branco */
+    color: var(--color-secondary);
     text-decoration: none;
     margin-bottom: 10px;
 }
 
 /* Remover efeito de hover */
 .footer .footer-link:hover {
-    color: #fff; /* Sem alteração de cor ao passar o mouse */
+    color: var(--color-secondary);
 }
 
 /* Alinhamento de texto à esquerda */
@@ -724,8 +720,8 @@ p {
     display: inline-block;
     margin-right: 10px;
     font-size: 20px;
-    color: #fff;
-    background-color: #444; /* Fundo dos ícones sociais */
+    color: var(--color-secondary);
+    background-color: var(--color-gray);
     padding: 10px;
     border-radius: 50%;
 }
@@ -761,7 +757,7 @@ p {
 
 /* Copyright */
 .copyright {
-    background: #222222;
+    background: var(--color-black);
     padding: 15px 0;
     width: 100%;            /* garante que ocupe toda a largura */
     position: relative;     /* evita sobreposição */
@@ -773,17 +769,17 @@ p {
 .copyright p {
     margin: 0;              /* remove margem do <p> */
     font-size: 14px;
-    color: #fff;
+    color: var(--color-secondary);
 }
 
 .copyright a {
-    color: var(--color-white);
+    color: var(--color-secondary);
     transition: color 0.3s;
     text-decoration: none;
 }
 
 .copyright a:hover {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     text-decoration: underline;
 }
 
