@@ -653,7 +653,7 @@ body {
     padding-left: 90px !important;  /* Padding maior à esquerda */
     padding-right: 3rem; /* Mantém um padding direito decente */
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    bottom: 200px;
   }
 
   .carousel .carousel-caption h1 {
