@@ -32,6 +32,12 @@
 section {
   scroll-margin-top: 70px; /* ajuste conforme a altura do seu header */
 }
+#maia {
+  scroll-margin-top: 120px; /* ajuste conforme a altura do seu header */
+}
+#espaco {
+  scroll-margin-top: -20px; /* ajuste conforme a altura do seu header */
+}
 
 .bg-bege, body {
     background-color:  var(--color-secondary);
